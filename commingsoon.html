@@ -10,58 +10,86 @@
             font-family: 'TT Supermolot Neue', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #4a90e2; /* Background color */
-            color: #000; /* Text color set to black */
+            background-color: #f0f4f8; /* Lighter background color for better contrast */
+            color: #333; /* Darker text color for improved readability */
         }
         .banner {
-            background-image: url('https://github.com/SirVeritas1/VentSafeDCBot/blob/main/Comming%20soon!.png?raw=true');
+            background-image: url('https://raw.githubusercontent.com/SirVeritas1/VentSafeDCBot/main/Comming%20soon!.png');
             background-size: cover;
-            height: 300px; /* Adjust height as necessary */
+            background-position: center;
+            height: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+            position: relative;
+        }
+        .banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text contrast */
         }
         .banner h1 {
-            font-size: 3rem;
-            color: #fff; /* Banner text color remains white for contrast */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+            font-size: 3.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+            margin: 0;
         }
         .content {
-            padding: 20px;
+            padding: 40px;
             text-align: center;
         }
         .content h2 {
-            font-size: 2rem;
-            margin-top: 20px;
+            font-size: 2.5rem;
+            color: #4a90e2;
+            margin-bottom: 20px;
         }
         .content p {
-            font-size: 1.2rem;
-            line-height: 1.5;
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555; /* Slightly darker text for better readability */
         }
         .warning {
             padding: 20px;
             text-align: center;
-            background-color: #ffcccb; /* Light red background for warning */
-            margin: 20px; /* Adds margin around the warning box */
-            border-radius: 5px; /* Rounded corners for the warning box */
+            background-color: #ffebcc; /* Softer yellow background for warning */
+            margin: 30px auto;
+            border-radius: 8px;
+            max-width: 800px; /* Limiting the width for better readability */
         }
         .warning p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             line-height: 1.5;
-            color: red; /* Change text color to red */
+            color: #d9534f; /* Red text for emphasis */
+        }
+        .warning a {
+            color: #007bff; /* Blue color for link */
+            text-decoration: underline;
         }
         .footer {
             text-align: center;
-            padding: 10px;
-            font-size: 0.9rem; /* Slightly smaller font size */
-            margin-top: 20px; /* Adds space above the footer */
+            padding: 20px;
+            background-color: #4a90e2;
+            color: #fff;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        .footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
 
     <div class="banner">
+        <h1>VentSafe</h1>
     </div>
 
     <div class="content">
@@ -77,7 +105,7 @@
     </div>
 
     <div class="warning">
-        <p>You are not alone. If you need support, consider reaching out to a <a href="https://www.7cups.com/" target="_blank" style="color: blue; text-decoration: underline;">free therapist online</a>.</p>
+        <p>You are not alone. If you need support, consider reaching out to a <a href="https://www.7cups.com/" target="_blank">free therapist online</a>.</p>
     </div>
 
     <div class="footer">
