@@ -10,71 +10,94 @@
             font-family: 'TT Supermolot Neue', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #4a90e2; /* Background color */
-            color: #000; /* Text color set to black */
+            background-color: #f0f4f8; /* Lighter background color for better contrast */
+            color: #333; /* Text color for improved readability */
         }
         .banner {
-            background-image: url('https://github.com/SirVeritas1/VentSafeDCBot/blob/main/Comming%20soon!.png?raw=true');
+            background-image: url('https://raw.githubusercontent.com/SirVeritas1/VentSafeDCBot/main/Comming%20soon!.png');
             background-size: cover;
-            height: 300px; /* Adjust height as necessary */
+            background-position: center;
+            height: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        .banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text contrast */
         }
         .banner h1 {
-            font-size: 3rem;
-            color: #fff; /* Banner text color remains white for contrast */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+            font-size: 3.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+            margin: 0;
         }
         .content {
-            padding: 20px;
+            padding: 30px;
             text-align: center;
         }
         .content h2 {
-            font-size: 2rem;
-            margin-top: 20px;
+            font-size: 2.5rem;
+            color: #4a90e2;
+            margin-bottom: 20px;
         }
         .content table {
             margin: 20px auto;
             border-collapse: collapse;
             width: 90%;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
         .content th, .content td {
-            border: 1px solid #000;
-            padding: 10px;
+            border: 1px solid #ddd;
+            padding: 15px;
             text-align: left;
         }
         .content th {
-            background-color: #fff; /* Header background color */
+            background-color: #4a90e2;
+            color: #fff;
         }
         .content img {
-            width: 50px; /* Set image width */
-            height: 50px; /* Set image height */
-            border-radius: 50%; /* Make images circular */
-            margin-right: 10px; /* Space between image and text */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
         }
         .content a {
-            color: #000; /* Default link color */
-            font-weight: bold; /* Make links bold */
-            text-decoration: none; /* No underline by default */
+            color: #4a90e2;
+            font-weight: bold;
+            text-decoration: none;
         }
         .content a:hover {
-            text-decoration: underline; /* Underline on hover */
-            color: #000; /* Ensure color remains black on hover */
+            text-decoration: underline;
         }
         .footer {
             text-align: center;
-            padding: 10px;
-            font-size: 0.9rem; /* Slightly smaller font size */
-            margin-top: 20px; /* Adds space above the footer */
+            padding: 20px;
+            background-color: #4a90e2;
+            color: #fff;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        .footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
 
     <div class="banner">
-
     </div>
 
     <div class="content">
@@ -85,13 +108,13 @@
                     <th>Name</th>
                     <th>Cost</th>
                     <th>Location</th>
-                    <th>Type</th> <!-- Online or Physical -->
+                    <th>Type</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>
-                        <img src="https://play-lh.googleusercontent.com/vtkK69J_JMkUcDweuZJfDLdapkmdqnnp5h2-PCv4u2iNY9oCEk-C3sSERBpf-RZ4-xI" alt="7 Cups"> <!-- Placeholder for 7 Cups -->
+                        <img src="https://play-lh.googleusercontent.com/vtkK69J_JMkUcDweuZJfDLdapkmdqnnp5h2-PCv4u2iNY9oCEk-C3sSERBpf-RZ4-xI" alt="7 Cups">
                         <a href="https://www.7cups.com/" target="_blank">7 Cups</a>
                     </td>
                     <td>Free</td>
@@ -100,7 +123,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFuOLQEWJBLGIOQ1Rd5qXnDZs-LhkwflfbgA&s" alt="TherapyDen"> <!-- Placeholder for TherapyDen -->
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFuOLQEWJBLGIOQ1Rd5qXnDZs-LhkwflfbgA&s" alt="TherapyDen">
                         <a href="https://www.therapyden.com/" target="_blank">TherapyDen</a>
                     </td>
                     <td>Varies</td>
@@ -109,7 +132,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <img src="https://www.kipp.org/wp-content/uploads/2022/09/Talkspace-logo.png" alt="Talkspace"> <!-- Placeholder for Talkspace -->
+                        <img src="https://www.kipp.org/wp-content/uploads/2022/09/Talkspace-logo.png" alt="Talkspace">
                         <a href="https://www.talkspace.com/" target="_blank">Talkspace</a>
                     </td>
                     <td>Varies</td>
@@ -121,7 +144,7 @@
     </div>
 
     <div class="footer">
-        <p>© 2024 VentSafe | Protected under the MIT License</p> <!-- Updated Copyright Notice -->
+        <p>© 2024 VentSafe | Protected under the MIT License</p>
     </div>
 
 </body>
